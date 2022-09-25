@@ -9,9 +9,10 @@ test('it should just work', async () => {
   }).process(`<!DOCTYPE html><html>
       <head><title>Hello World!</title></head><body></body>
     </html>`)
+  file.cwd = ''
   expect(file).toMatchInlineSnapshot(`
     VFile {
-      "cwd": "/Users/JounQin/Workspaces/GitHub/unified-prettier",
+      "cwd": "",
       "data": {},
       "history": [],
       "messages": [

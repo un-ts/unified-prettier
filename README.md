@@ -19,7 +19,9 @@ A `prettier` serializer/stringifier for `unified` ecosystem (rehype/remark/mdx)
 
 - [Usage](#usage)
   - [Install](#install)
+  - [CLI](#cli)
   - [API](#api)
+- [Acknowledgements](#acknowledgements)
 - [Sponsors](#sponsors)
 - [Backers](#backers)
 - [Changelog](#changelog)
@@ -40,13 +42,71 @@ yarn add unified-prettier
 npm i unified-prettier
 ```
 
+### CLI
+
+```sh
+remark --use unified-prettier .
+```
+
+The above command may yield:
+
+```log
+README.md
+  18:30-19:1  warning  Replace `⏎` with `·`  replace  prettier
+        38:1  warning  Insert `⏎`            insert   prettier
+  40:32-41:1  warning  Delete `⏎`            delete   prettier
+```
+
+This can also be spcified in a `.remarkrc` file:
+
+```jsonc
+{
+  "plugins": ["unified-prettier"]
+}
+```
+
 ### API
 
-```js
-import echo from 'unified-prettier'
+This plugin can also be used with programmatically:
 
-echo()
+```js
+import { unified } from 'unified'
+import { prettier } from 'unified-prettier'
+import { readSync } from 'to-vfile'
+
+unified()
+  .use(prettier, {
+    parser: 'markdown', // or `html`, or `mdx`,
+    // other `prettier` options
+  })
+  .process('# Hello World')
+  .then(({ messages, value }) => {
+    // Formatted content
+    console.log(value)
+
+    // Prettier formatting violations
+    console.dir(messages)
+  })
+
+// or
+unified()
+  .use(prettier, {
+    // no `parser` required if you're using correct `VFile#path`
+    // `prettier` options except parser
+  })
+  .process(readSync('README.md'))
+  .then(({ messages, value }) => {
+    // Formatted content
+    console.log(value)
+
+    // Prettier formatting violations
+    console.dir(messages)
+  })
 ```
+
+## Acknowledgements
+
+[remark-prettier][]
 
 ## Sponsors
 
@@ -73,3 +133,4 @@ Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.m
 [1stg.me]: https://www.1stg.me
 [jounqin]: https://GitHub.com/JounQin
 [mit]: http://opensource.org/licenses/MIT
+[remark-prettier]: https://github.com/remcohaszing/remark-prettier

@@ -13,9 +13,10 @@ test('it should just work', async () => {
   1. List item 1
   2. List item 2
   1.  List item 3`)
+  file.cwd = ''
   expect(file).toMatchInlineSnapshot(`
     VFile {
-      "cwd": "/Users/JounQin/Workspaces/GitHub/unified-prettier",
+      "cwd": "",
       "data": {},
       "history": [],
       "messages": [
