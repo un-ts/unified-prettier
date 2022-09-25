@@ -1,11 +1,11 @@
-# lib-boilerplate
+# unified-prettier
 
-[![GitHub Actions](https://github.com/un-ts/lib-boilerplate/workflows/CI/badge.svg)](https://github.com/un-ts/lib-boilerplate/actions/workflows/ci.yml)
-[![Codecov](https://img.shields.io/codecov/c/github/un-ts/lib-boilerplate.svg)](https://codecov.io/gh/un-ts/lib-boilerplate)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/un-ts/lib-boilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/un-ts/lib-boilerplate/context:javascript)
-[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fun-ts%2Flib-boilerplate%2Fmain%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
-[![npm](https://img.shields.io/npm/v/lib-boilerplate.svg)](https://www.npmjs.com/package/lib-boilerplate)
-[![GitHub Release](https://img.shields.io/github/release/un-ts/lib-boilerplate)](https://github.com/un-ts/lib-boilerplate/releases)
+[![GitHub Actions](https://github.com/un-ts/unified-prettier/workflows/CI/badge.svg)](https://github.com/un-ts/unified-prettier/actions/workflows/ci.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/un-ts/unified-prettier.svg)](https://codecov.io/gh/un-ts/unified-prettier)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/un-ts/unified-prettier.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/un-ts/unified-prettier/context:javascript)
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fun-ts%2Funified-prettier%2Fmain%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
+[![npm](https://img.shields.io/npm/v/unified-prettier.svg)](https://www.npmjs.com/package/unified-prettier)
+[![GitHub Release](https://img.shields.io/github/release/un-ts/unified-prettier)](https://github.com/un-ts/unified-prettier/releases)
 
 [![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
@@ -13,7 +13,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/changesets/changesets)
 
-A simple library boilerplate.
+A `prettier` serializer/stringifier for `unified` ecosystem (rehype/remark/mdx)
 
 ## TOC <!-- omit in toc -->
 
@@ -31,19 +31,19 @@ A simple library boilerplate.
 
 ```sh
 # pnpm
-pnpm add lib-boilerplate
+pnpm add unified-prettier
 
 # yarn
-yarn add lib-boilerplate
+yarn add unified-prettier
 
 # npm
-npm i lib-boilerplate
+npm i unified-prettier
 ```
 
 ### API
 
 ```js
-import echo from 'lib-boilerplate'
+import echo from 'unified-prettier'
 
 echo()
 ```
