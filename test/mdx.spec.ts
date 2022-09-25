@@ -3,7 +3,7 @@ import { unified } from 'unified'
 
 import { prettier } from 'unified-prettier'
 
-test('it should just work', async () => {
+it('should just work', async () => {
   const file = await unified().use(remarkParse).use(prettier, {
     parser: 'mdx',
   }).process(`import {Demo} from 'demo';

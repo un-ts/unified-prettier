@@ -5,7 +5,7 @@ import { unified } from 'unified'
 
 import { prettier } from 'unified-prettier'
 
-test('it should just work', async () => {
+it('should just work', async () => {
   const fixturesPath = path.resolve('test/fixtures')
   const files = await fs.readdir(fixturesPath)
   for (const file of files) {

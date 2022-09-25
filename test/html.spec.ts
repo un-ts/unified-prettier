@@ -3,7 +3,7 @@ import { unified } from 'unified'
 
 import { prettier } from 'unified-prettier'
 
-test('it should just work', async () => {
+it('should just work', async () => {
   const file = await unified().use(rehypeParse).use(prettier, {
     parser: 'html',
   }).process(`<!DOCTYPE html><html>
