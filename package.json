@@ -1,6 +1,6 @@
 {
   "name": "unified-prettier",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "A `prettier` serializer/stringifier for `unified` ecosystem (rehype/remark/mdx)",
   "repository": "git+https://github.com/un-ts/unified-prettier.git",
