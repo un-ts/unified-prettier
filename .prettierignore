@@ -5,3 +5,4 @@ dist
 lib
 /auto-imports.d.ts
 /pnpm-lock.yaml
+/test/fixtures

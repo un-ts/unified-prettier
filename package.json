@@ -17,9 +17,7 @@
     "!**/*.tsbuildinfo"
   ],
   "scripts": {
-    "build": "run-p build:*",
-    "build:r": "r -f cjs",
-    "build:tsc": "tsc -p src",
+    "build": "tsc -p src",
     "codesandbox:install": "yarn",
     "dev": "vitest",
     "docs:build": "w -e docs -p --publicPath /",
@@ -38,8 +36,12 @@
     "vercel-build": "pnpm docs:build",
     "version": "changeset version"
   },
+  "peerDependencies": {
+    "prettier": "^2.0.0"
+  },
   "dependencies": {
-    "tslib": "^2.4.0"
+    "prettier-linter-helpers": "^1.0.0",
+    "vfile-location": "^4.0.1"
   },
   "devDependencies": {
     "@1stg/app-config": "^7.3.0",
@@ -48,9 +50,10 @@
     "@changesets/cli": "^2.24.4",
     "@pkgr/webpack": "^3.4.0",
     "@pkgr/webpack-mdx": "^2.2.0",
-    "@size-limit/preset-small-lib": "^8.1.0",
     "@types/mdx": "^2.0.2",
     "@types/node": "^18.7.21",
+    "@types/prettier": "^2.7.1",
+    "@types/prettier-linter-helpers": "^1.0.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/web": "^0.0.75",
@@ -59,15 +62,19 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
+    "rehype-parse": "^8.0.4",
+    "remark-parse": "^10.0.1",
     "sirv-cli": "^2.0.2",
     "size-limit": "^8.1.0",
+    "size-limit-preset-node-lib": "^0.2.0",
     "type-coverage": "^2.22.0",
-    "typescript": "~4.8.3",
+    "typescript": "~4.7.4",
     "unified-prettier": "link:.",
     "unplugin-auto-import": "^0.11.2",
     "vitest": "^0.23.4"
   },
   "resolutions": {
+    "prettier": "^2.7.1",
     "typescript": "~4.7.4"
   },
   "publishConfig": {
@@ -75,19 +82,20 @@
     "module": "./lib/index.js",
     "exports": {
       "types": "./lib/index.d.ts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "default": "./lib/index.js"
     },
     "types": "./lib/index.d.ts"
   },
   "pnpm": {
     "overrides": {
+      "prettier": "^2.7.1",
       "typescript": "~4.7.4"
     }
   },
   "size-limit": [
     {
-      "path": "lib/index.js"
+      "path": "lib/index.js",
+      "limit": "900B"
     }
   ],
   "typeCoverage": {

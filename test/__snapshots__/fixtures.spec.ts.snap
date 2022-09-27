@@ -1,0 +1,47 @@
+// Vitest Snapshot v1
+
+exports[`should just work > test.html 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body></body>
+</html>
+"
+`;
+
+exports[`should just work > test.md 1`] = `
+"import {Demo} from 'demo';
+export {Demo}
+
+# Header
+
+1. List item 1
+2. List item 2
+3. List item 3
+"
+`;
+
+exports[`should just work > test.mdx 1`] = `
+"import { Demo } from 'demo'
+export { Demo }
+
+# Header
+
+1. List item 1
+2. List item 2
+3. List item 3
+"
+`;
+
+exports[`should just work > test2.html 1`] = `
+"<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body></body>
+</html>
+"
+`;
