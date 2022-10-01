@@ -37,7 +37,7 @@
     "version": "changeset version"
   },
   "peerDependencies": {
-    "prettier": "^2.0.0"
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0",
